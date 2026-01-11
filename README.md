@@ -1,4 +1,4 @@
-# EDS aptone
+# EDS Captone
 
 This project analyzes how climate affects tea yield in Yunnan, China.
 
