@@ -1,11 +1,11 @@
 # EDS Captone
 
-This project analyzes primary spatial dataset consisting of camera trap station locations and species encounter records from the North China Leopard "Leopard Country Field" (豹乡田) project in Heshun, Shanxi.
+This project analyzes a primary spatial dataset consisting of camera trap station locations and species encounter records from the North China Leopard "Leopard Country Field" (豹乡田) project in Heshun, Shanxi.
 
 ## Project Structure
 - data/raw: Original spatial and species encounter data
 - data/processed: Cleaned and processed joint dataset
-- scripts: Analysis scripts (Python/R)
+- scripts: Analysis scripts (in R)
 - docs: Documentation and notes
 - figures: Generated plots and visualizations
 
