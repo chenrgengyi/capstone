@@ -22,6 +22,6 @@ The spatial analysis reveals a significant expansion of hotspots during the wint
 - Winter: The heatmap shows a consolidated, high-intensity corridor  through the central farmland, likely driven by reduced human presence or shifting prey availability.
 
 2. Diel Rhythms & Habitat Preference
-Using circular activity plots, the data highlights a strong preference for noctornal & open space.
-- Noctornal Patterns: significant increase in activities seen at Open Fields camera stations and between 21:00 and 03:00.
+Using circular activity plots, the data highlights a strong preference for nocturnal & open fields.
+- Nocturnal Patterns: significant increase in activities seen at Open Fields camera stations and between 21:00 and 03:00.
 - Water Sources: Activity near water sources is significantly lower in frequency, which could indicate favorable predator-prey condition.
