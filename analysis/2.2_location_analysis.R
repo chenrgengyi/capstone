@@ -15,7 +15,7 @@ fox_clean <- final_species %>%
   mutate(
     time_decimal = decimal,
     season = ifelse(month %in% c(11,12,1,2), "Winter", "Summer"),
-    is_daytime = ifelse(time_decimal >= 5/24 & time_decimal < 19/24, "白天", "夜间")
+    is_daytime = ifelse(time_decimal >= 5/24 & time_decimal < 19/24, "白天", "夜间") #白天stands for daytime and 夜间stands for nighttime
   ) %>%
   filter(!is.na(time_decimal))
 
@@ -27,6 +27,7 @@ fox_camdata <- fox_clean %>%
   ) %>%
   filter(!is.na(time_decimal))
 
+#open fields vs water sources visualization
 ggplot(fox_camdata, aes(x = time_decimal, fill = is_daytime)) +
   geom_histogram(bins = 24, boundary = 0, color = "white", linewidth = 0.5) +
     coord_polar(start = 0) +
