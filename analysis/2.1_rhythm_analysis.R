@@ -64,7 +64,7 @@ ggplot(fox_camdata, aes(x = time_decimal, fill = is_daytime)) +
     scale_fill_manual(values = c("Day" = "orange", "Night" = "darkblue")) +
     facet_wrap(~habitat) +
     labs(
-    title = "Red Fox Activity Rhythm",
+    title = "Red Fox (Vulpes vulpes ssp) Activity Rhythm",
     subtitle = "Open Fields vs. Water Sources",
     x = "Time of Day", 
     y = "Frequency",
