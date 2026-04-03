@@ -10,7 +10,7 @@ library(lubridate)
 
 
 #====initial data cleaning/visualization====
-base_path <- "/Users/gengyichen/Desktop/CFCA/data/leopardfield/202601" 
+base_path <- "/Users/gengyichen/Desktop/EDS/capstone/202601" 
 print(dir_ls(base_path, type = "directory"))
 all_files <- dir_ls(base_path, recurse = TRUE)
 
