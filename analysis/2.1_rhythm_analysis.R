@@ -13,7 +13,7 @@ fox_clean <- final_species %>%
   mutate(
     time_decimal = decimal,
     season = ifelse(month %in% c(11,12,1,2), "Winter", "Summer"),
-    is_daytime = ifelse(time_decimal >= 5/24 & time_decimal < 19/24, "白天", "夜间")
+    is_daytime = ifelse(time_decimal >= 5/24 & time_decimal < 19/24, "白天", "夜间") #白天stands for daytime and 夜间stands for nighttime
   ) %>%
   filter(!is.na(time_decimal))
 
