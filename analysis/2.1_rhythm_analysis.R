@@ -16,7 +16,7 @@ fox_clean <- final_species %>%
   ) %>%
   filter(!is.na(time_decimal))
 
-#plot data for visualization
+#plot summer/winter data for visualization
 fox_plot_data <- fox_clean %>%
   left_join(legend_info, by = c("season", "is_daytime"))
 full_rhythmanalysis <- ggplot(fox_clean, aes(x = time_decimal, fill = season)) +
@@ -43,4 +43,39 @@ full_rhythmanalysis <- ggplot(fox_clean, aes(x = time_decimal, fill = season)) +
     plot.title = element_text(hjust = .5, face = "bold", size = 16),
     panel.spacing.x = unit(2, "cm"),
     plot.subtitle = element_text(hjust = 0.5)
+  )
+
+#plot open field/water sources cameras for visualization
+fox_camdata <- fox_clean %>%
+  mutate(
+    habitat = ifelse(grepl("^A", camera_number), "Open Fields", "Water Sources"),
+    is_daytime = ifelse(time_decimal >= 5/24 & time_decimal < 19/24, "Day", "Night")
+  ) %>%
+  filter(!is.na(time_decimal))
+
+ggplot(fox_camdata, aes(x = time_decimal, fill = is_daytime)) +
+  geom_histogram(bins = 24, boundary = 0, color = "white", linewidth = 0.5) +
+    coord_polar(start = 0) +
+    scale_x_continuous(
+    limits = c(0, 1),
+    breaks = seq(0, 7/8, by = 1/8),
+    labels = c("0:00", "3:00", "6:00", "9:00", "12:00", "15:00", "18:00", "21:00")
+  ) +
+    scale_fill_manual(values = c("Day" = "orange", "Night" = "darkblue")) +
+    facet_wrap(~habitat) +
+    labs(
+    title = "Red Fox Activity Rhythm",
+    subtitle = "Open Fields vs. Water Sources",
+    x = "Time of Day", 
+    y = "Frequency",
+    fill = "Period"
+  ) +
+  theme_bw() + 
+  theme(
+    panel.grid.major = element_line(color = "black", linewidth = 0.1), 
+    strip.background = element_rect(fill = "grey90"),
+    strip.text = element_text(size = 12, face = "bold"),
+    axis.text.y = element_blank(),
+    axis.ticks = element_blank(),
+    legend.position = "bottom"
   )
