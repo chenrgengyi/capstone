@@ -7,6 +7,7 @@ library(scales)
 library(showtext)
 
 final_species <- read_xlsx("/Users/gengyichen/Desktop/EDS/capstone/data/processed/species_encounter_final.xlsx") 
+#or use this path instead: data/processed/combined_camera_data.csv
 
 #load clean data
 fox_clean <- final_species %>%
