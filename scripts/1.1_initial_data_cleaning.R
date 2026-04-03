@@ -18,7 +18,7 @@ all_files <- dir_ls(base_path, recurse = TRUE)
 video_table <- tibble(full_path = as.character(all_files)) %>%
   filter(str_detect(full_path, "(?i)\\.(mp4|avi|mov)$"))
 
-# 2. 
+# 2. data output
 final_output <- video_table %>%
   mutate(
     path_parts = str_split(full_path, "/"),
