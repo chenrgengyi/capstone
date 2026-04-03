@@ -1,6 +1,7 @@
-# EDS Captone
+# EDS Captone: Red Fox Spatial Ecology in Agricultural Landscapes
 
-This project analyzes a primary spatial dataset consisting of camera trap station locations and species encounter records from the North China Leopard "Leopard Country Field" project in Shanxi, China.
+# Project Summary
+This study analyzes Red Fox activity patterns on an animal-friendly farmland in Northern China. Using R-based spatial heatmaps and seasonal/diel rhythm analysis, I identified that red fox encounters were significantly higher in winter, at night, and in open-spaced agricultural lands. These findings enable land managers to implement targeted, cost-effective conservation strategies and seasonal conflict-mitigation protocols.
 
 ## Project Structure
 - data/raw: Original spatial and species encounter data
