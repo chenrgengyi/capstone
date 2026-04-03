@@ -28,3 +28,6 @@ final_output <- read_xlsx("/Users/gengyichen/Desktop/EDS/capstone/data/processed
 encounters_df <- final_output
 final_merge <- stations_cleaned %>%
   inner_join(encounters_df, by = c("name" = "camera_number"))
+
+#output final merge file as spatial output
+st_write(final_merge, "/Users/gengyichen/Desktop/EDS/capstone/data/processed/final_merge.shp", delete_layer = TRUE)
